@@ -19,6 +19,11 @@ function log(type,logItem)
   elseif type == "success" then
     term.setTextColor(colors.green)
     print("[SUCCESS] ".. logItem)
+    term.setTextColor(oldTextColor)
+   elseif type == "fail" then
+    term.setTextColor(colors.red)
+    print("[FAIL] ".. logItem)
+    term.setTextColor(oldTextColor)
   else 
     print("["..type.."] ".. logItem)
   end
