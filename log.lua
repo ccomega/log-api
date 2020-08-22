@@ -12,6 +12,10 @@ function log(type,logItem)
     term.setTextColor(colors.green)
     print("[DEBUG] ".. logItem)
     term.setTextColor(oldTextColor)
+  elseif type == "load" then
+    term.setTextColor(colors.cyan)
+    print("[LOAD]"..logItem)
+    term.setTextColor(oldTextColor)
   else 
     print("["..type.."] ".. logItem)
   end
